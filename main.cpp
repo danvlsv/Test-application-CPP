@@ -143,6 +143,7 @@ int main()
     try {
         figures.push_back(std::make_shared<Circle>(36));
         figures.push_back(std::make_shared<Triangle>(34, 25, 17));
+        figures.push_back(std::make_shared<Rectangle>(340, 25));
         figures.push_back(std::make_shared<Triangle>(123.67, 146.43, 170.92));
         figures.push_back(std::make_shared<Circle>(250));
     }
