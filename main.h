@@ -7,8 +7,15 @@
 #include <iostream>
 #include <vector>
 #include <memory> 
+#ifdef _WIN32
+    #include <sys/io.h>    
+#else
+        #include <sys/uio.h>
+#endif
+
+// #include <io.h> 
 #include <boost/thread.hpp>
-#include <io.h>  
+ 
 #include <fcntl.h>
 //#include <boost/thread/mutex.hpp>
 

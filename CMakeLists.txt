@@ -18,10 +18,12 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET TestTaskC++ PROPERTY CXX_STANDARD 20)
 endif()
 
- set(BOOST_MIN_VERSION 1.87.0)
+ set(BOOST_MIN_VERSION 1.8.0)
+
+ #include_directories(Figures)
   
 # Подключаем необходимые модули. Для примера подключим program_options
-find_package(Boost 1.87 REQUIRED COMPONENTS thread system filesystem) 
+find_package(Boost 1.8 REQUIRED COMPONENTS thread system filesystem) 
   
 # Если библиотека найдена, то
 if (Boost_FOUND)
