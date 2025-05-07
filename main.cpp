@@ -11,7 +11,7 @@ bool FigureComp(const std::shared_ptr<Figure>& a, const std::shared_ptr<Figure>&
 	return a->GetArea() < b->GetArea();
 }
 
-void PrintResult(vector<std::shared_ptr<Figure>>& arr, string msg)
+void PrintResult(vector<std::shared_ptr<Figure>>& arr, const string& msg)
 {
     string result = "\n\n"+msg+"\n";
     for (const auto& figure : arr) {
@@ -23,8 +23,8 @@ void PrintResult(vector<std::shared_ptr<Figure>>& arr, string msg)
 
 void merge(vector<std::shared_ptr<Figure>>& arr, int left, int mid, int right)
 {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+    const int n1 = mid - left + 1;
+    const int n2 = right - mid;
 
     vector<std::shared_ptr<Figure>> L(n1), R(n2);
 

@@ -5,21 +5,21 @@ double Figure::GetArea() {
     return _area;
 }
 
-Circle::Circle(double radius)
+Circle::Circle(const double radius)
 {
     if (radius <= 0)
     {
         throw std::invalid_argument("Radius must be bigger than zero");
     }
     _radius = radius;
-    Area();
+    Circle::Area();
 }
 
 void Circle::Area() {
     _area = (M_PI * pow(_radius, 2));
 }
 
-Triangle::Triangle(double a, double b, double c)
+Triangle::Triangle(const double a, const double b, const double c)
 {
     if (a <= 0 || b <= 0 || c <= 0)
     {
@@ -30,11 +30,11 @@ Triangle::Triangle(double a, double b, double c)
         throw std::invalid_argument("Triangle is not possible");
     }
     _a = a; _b = b; _c = c;
-    Area();
+    Triangle::Area();
 }
 
 void Triangle::Area() {
-    double s = (_a + _b + _c) / 2;
+    const double s = (_a + _b + _c) / 2;
     _area = sqrt(s * (s - _a) * (s - _b) * (s - _c));
 }
 
@@ -45,7 +45,7 @@ Rectangle::Rectangle(double a, double b)
         throw std::invalid_argument("Sides of a rectangle must be bigger than zero");
     }
     _a = a; _b = b;
-    Area();
+    Rectangle::Area();
 }
 
 void Rectangle::Area() {

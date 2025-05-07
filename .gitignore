@@ -14,6 +14,21 @@ Makefile
 *.userosscache
 *.sln.docstates
 
+# CLion specific
+/.idea/
+/TestTaskC++
+
+# Ninja
+/.ninja_deps
+/.ninja_log
+build.ninja
+
+# Executables
+*.exe
+*.out
+*.app
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -365,3 +380,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+

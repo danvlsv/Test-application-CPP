@@ -31,7 +31,7 @@ class Triangle : public Figure
 {
 private:
 	double _a, _b, _c;
-	double _radius;
+	double _radius{};
 	void Area() override;
 public:
 	Triangle(double a, double b, double c);
